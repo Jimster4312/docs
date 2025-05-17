@@ -1,0 +1,106 @@
+---
+title: "Setting Up Dynmap"
+description: "Dynmap is a powerful plugin that creates an interactive, Google Maps-style map of your Minecraft world that players can view in a web browser."
+---
+
+<Note>
+  Dynmap is a plugin for Bukkit-based servers. It works with Paper, Spigot, and Bukkit server types. If you're using Forge, Fabric, or vanilla Minecraft, you'll need a different mapping solution.
+</Note>
+
+## **What is Dynmap?**[**​**](https://help.talldwarfhosting.com/docs/minecraft-server-dynmap#what-is-dynmap)
+
+[Dynmap](https://www.spigotmc.org/resources/dynmap%C2%AE.274/) generates a real-time web-based map of your Minecraft world with features including:
+
+- Interactive web interface viewable from any browser
+- Live updates as your world changes
+- Multiple map styles (flat, 3D isometric, cave view)
+- Player tracking and markers
+- Customizable configuration
+
+## **Installation Guide**[**​**](https://help.talldwarfhosting.com/docs/minecraft-server-dynmap#installation-guide)
+
+### **1. Download Dynmap**[**​**](https://help.talldwarfhosting.com/docs/minecraft-server-dynmap#1-download-dynmap)
+
+1. Visit the [Official Dynmap Spigot page](https://www.spigotmc.org/resources/dynmap%C2%AE.274/)
+2. Download the latest version compatible with your server
+
+### **2. Install the Plugin**[**​**](https://help.talldwarfhosting.com/docs/minecraft-server-dynmap#2-install-the-plugin)
+
+1. Log in to your [Game Panel](https://panel.talldwarfhosting.com/auth/login)
+2. Navigate to your server's **Files** section
+3. Open the `plugins` folder (create it if it doesn't exist)
+4. Upload the Dynmap JAR file you downloaded
+5. **Restart** your server to load the plugin
+
+### **3. Configure Dynmap**[**​**](https://help.talldwarfhosting.com/docs/minecraft-server-dynmap#3-configure-dynmap)
+
+After restarting, Dynmap will generate configuration files. You'll need to set up the web server port:
+
+1. Go back to your server's **Files** section
+2. Navigate to `plugins/dynmap`
+3. Open `configuration.txt`
+4. Locate the `webserver-port` setting (around line 355)
+
+<Expandable title="Content">
+  ```
+  # The network-interface the webserver will bind to (0.0.0.0 for all interfaces, 127.0.0.1 for only local access)
+  # If not set, uses same setting as server in server.properties (or 0.0.0.0 if not specified)
+  #webserver-bindaddress: 0.0.0.0
+  
+  # The TCP-port the webserver will listen on
+  webserver-port: 8123  # Change this to your spare port
+  
+  # Maximum concurrent sessions on internal web server - limits resources used in Bukkit server
+  max-sessions: 30
+  
+  # Disables Webserver portion of Dynmap (Advanced users only)
+  disable-webserver: false
+  ```
+</Expandable>
+
+### **4. Set Up a Port**[**​**](https://help.talldwarfhosting.com/docs/minecraft-server-dynmap#4-set-up-a-port)
+
+You need a dedicated port for Dynmap's web server:
+
+1. Go to your server's **Network** tab
+2. Click **ADD NEW PORT**
+3. Note the port number assigned
+4. Update the `webserver-port` in Dynmap's configuration.txt to match this port
+5. Save the file and restart your server
+
+### **5. Access Your Map**[**​**](https://help.talldwarfhosting.com/docs/minecraft-server-dynmap#5-access-your-map)
+
+After configuration, access your map using:
+
+```
+http://YOUR_SERVER_IP:PORT
+```
+
+Replace `YOUR_SERVER_IP` with your server's IP address and `PORT` with the port you configured.
+
+## **Rendering Your World**[**​**](https://help.talldwarfhosting.com/docs/minecraft-server-dynmap#rendering-your-world)
+
+Dynmap needs to render your world before it will be visible:
+
+```
+/dynmap fullrender world
+```
+
+This will start rendering your Minecraft world, which may take time depending on world size.
+
+### **Rendering Status and Control**[**​**](https://help.talldwarfhosting.com/docs/minecraft-server-dynmap#rendering-status-and-control)
+
+- Check status: `/dynmap radiusrender status`
+- Cancel rendering: `/dynmap cancelrender world`
+- Render specific area: `/dynmap radiusrender [player] [radius]`
+
+## **Optimization Tips**[**​**](https://help.talldwarfhosting.com/docs/minecraft-server-dynmap#optimization-tips)
+
+For large servers or worlds, consider these optimizations:
+
+- In configuration.txt, adjust `renderinterval` for rendering speed vs. server performance
+- Reduce tile update rate with `updaterate` setting
+- Disable unused map types in world configuration files
+- Use `deftemplatesuffix: lowres` for lower resource usage
+
+Visit the [official Dynmap documentation](https://github.com/webbukkit/dynmap/wiki) for advanced configuration options.

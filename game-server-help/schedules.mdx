@@ -1,0 +1,101 @@
+---
+title: "Managing Schedules"
+description: "How to create, edit and delete your schedules and tasks."
+---
+
+
+<AccordionGroup>
+  <Accordion title="Managing Schedules" description="Schedules are base layer, you set when they execute." icon="calendar-clock">
+    When first opening your [Game Panel](https://panel.talldwarfhosting.com/auth/login), navigate to your sidebar and look for the label **"Schedules"**
+
+    Once in the Schedules section select the button labelled **"Create Schedule"** then create a name for your schedule. Then you can set your timings using our examples bellow.
+
+    ## **How to set timings**
+
+    **Examples**
+
+    <Expandable title="Run Every 5 Minutes" defaultOpen>
+      | Minute | Hour | Day Of Month | Month | Day Of Week |
+      | :----: | :--: | :----------: | :---: | :---------: |
+      | \*/5   | \*   | \*           | \*    | \*          |
+    </Expandable>
+    **Run Schedule Every Hour**
+
+    <Expandable title="Timings">
+      | Minute | Hour | Day Of Month | Month | Day Of Week |
+      | :----: | :--: | :----------: | :---: | :---------: |
+      | \*     | \*/1 | \*           | \*    | \*          |
+    </Expandable>
+    **Run Schedule Everyday at 10**
+
+    <Expandable title="Timings">
+      | Minute | Hour | Day Of Month | Month | Day Of Week |
+      | :----: | :--: | :----------: | :---: | :---------: |
+      | \*     | 10   | \*           | \*    | \*          |
+    </Expandable>
+    **Using an Hour Range (8-12)**
+
+    <Expandable title="Timings">
+      | Minute | Hour | Day Of Month | Month | Day Of Week |
+      | :----: | :--: | :----------: | :---: | :---------: |
+      | \*     | 8-12 | \*           | \*    | \*          |
+    </Expandable>
+    **Run Schedule Once Everyday**
+
+    <Expandable title="Timings">
+      | Minute | Hour | Day Of Month | Month | Day Of Week |
+      | :----: | :--: | :----------: | :---: | :---------: |
+      | 0      | 0    | \*           | \*    | \*          |
+    </Expandable>
+    **Run Schedule Every Monday**
+
+    <Expandable title="Timings">
+      | Minute | Hour | Day Of Month | Month | Day Of Week |
+      | :----: | :--: | :----------: | :---: | :---------: |
+      | 0      | 0    | \*           | \*    | MON         |
+    </Expandable>
+  </Accordion>
+  <Accordion title="Setting up Tasks" description="Tasks are what run when the schedule starts. Such as restarting the server, executing commands, etc." icon="diagram-subtask">
+    Open the schedule you want to make a task for (not got one? **<u>Make one above</u>**)
+
+    ## Meanings
+
+    **Actions**
+
+    1. **Send Command** - Run a command in the console when the task runs
+    2. **Send Power Action** - Use a power action when the task runs (e.g. Restart, Start, Stop, Kill)
+    3. **Create Backup** - Creates a backup, you can select the files to ignore in the backup)
+
+    **Time Offset**
+
+    The time offset is the amount of time (in seconds) you want to pass **after running the last task** to then run **this task**.
+
+    For example, I have a task that run the command `say Server Restarting in 10 Seconds!`  I would then create another task that runs a Power Action to restart the server. Then also set the time offset to 10 seconds.
+
+    **Payload / Ignored Files**
+
+    Depending on which action you select this option will change to one of the following:
+
+    - A command for the console to run
+    - A Power Action for the server
+    - Ignored files when creating a backup.
+
+    ## Examples
+
+    **Power Action** (Restart)
+
+    <Expandable title="Example">
+      ![Schedules Restart No Offset Pn](/images/schedules-restart-no-offset.png)
+    </Expandable>
+    **Send Command**
+
+    <Expandable title="Example">
+      ![Schedules Send Command No Offset Pn](/images/schedules-send-command-no-offset.png)
+    </Expandable>
+    **Create Backup**
+
+    <Expandable title="Example">
+      ![Schedules Create Backup No Offset Pn](/images/schedules-create-backup-no-offset.png)
+    </Expandable>
+  </Accordion>
+</AccordionGroup>

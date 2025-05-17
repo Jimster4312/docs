@@ -1,0 +1,77 @@
+---
+title: "How to setup CoreProtect"
+description: "Here you can learn how to setup CoreProtect on your Minecraft Server to keep it safe from griefers and those who mean harm."
+---
+
+# **What is CoreProtect?**
+
+[CoreProtect](https://www.spigotmc.org/resources/coreprotect.8631/) is a useful plugin that allows you to log everything that happens on your Minecraft Server
+
+This can be very useful on public multiplayer servers, where there is a high chance of griefers, robbers and other malicous players, allowing you to roll back previous versions of almost everything that has happened, from yesterday to a week ago.
+
+# **Installation**
+
+If you want to install CoreProtect through downloading a file:
+
+1. Navigate to the [CoreProtect Spigot page](https://www.spigotmc.org/resources/coreprotect.8631/) and download the latest version
+2. Open your server in our [Game Panel](https://panel.talldwarfhosting.com/)
+3. Navigate to the `File Manager` tab
+4. Open your `plugins` folder
+5. Upload the CoreProtect .jar file
+6. **Restart** your server to complete the installation
+
+When your server restarts, you should see CoreProtect initializing in the console.
+
+# **Begin using CoreProtect**
+
+CoreProtect provides powerful tools to track and reverse changes on your server.
+
+<Info>
+  CoreProtect will only start logging actions from **when it is installed**. It cannot track changes made before installation.
+</Info>
+
+
+<AccordionGroup>
+  <Accordion title="General Commands" defaultOpen>
+    ```
+    /co help                 # View all available commands
+    /co status               # Check CoreProtect's current status
+    /co lookup               # Look up recorded actions
+    /co inspect              # Toggle inspection mode
+    ```
+  </Accordion>
+  <Accordion title="Rollback Commands">
+    ```
+    /co rollback t:12h       # Rollback all changes from the last 12 hours
+    /co rollback u:username  # Rollback all changes by a specific user
+    /co rollback r:10        # Rollback within a 10 block radius
+    ```
+  </Accordion>
+  <Accordion title="Lookup Commands">
+    ```
+    /co lookup u:username    # Check changes made by a specific user
+    /co lookup a:block       # Check block placement/destruction
+    /co lookup t:1d          # Check changes in the last day
+    ```
+  </Accordion>
+</AccordionGroup>
+
+## **Inspection Mode**[**​**](https://help.talldwarfhosting.com/docs/minecraft-server-coreprotect#inspection-mode)
+
+Inspection mode allows you to click on blocks to see their history:
+
+```
+/co i        # Toggle inspection mode on/off
+```
+
+When enabled, left-clicking any block will show you who placed or changed it.
+
+## **Common Use Cases**[**​**](https://help.talldwarfhosting.com/docs/minecraft-server-coreprotect#common-use-cases)
+
+- **Finding Griefers**: Use `/co lookup r:10 t:2d` to check recent changes in an area
+- **Recovering Stolen Items**: Use `/co lookup a:chest u:suspectedPlayer`
+- **Undoing Damage**: Use `/co rollback u:griefer t:1d` to undo a day's worth of grief
+
+## **Advanced Usage**[**​**](https://help.talldwarfhosting.com/docs/minecraft-server-coreprotect#advanced-usage)
+
+For a comprehensive list of CoreProtect commands and parameters, visit [the official documentation](https://docs.coreprotect.net/commands/).

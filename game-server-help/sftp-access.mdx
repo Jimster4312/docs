@@ -1,0 +1,36 @@
+---
+title: "Server SFTP Access"
+description: "How to connect to your server using SFTP."
+---
+
+<Info>
+  You will need a FTP/SFTP app on your PC such as [FileZilla](https://filezilla-project.org/)
+</Info>
+
+In this tutorial we will use [FileZilla](https://filezilla-project.org/)
+
+Firstly start by getting your SFTP details by going to your servers "**Settings**" tab and look for the section named "**SFTP Details**".
+
+In the SFTP app put in the following settings:
+
+**Host** - The "Server Address" from the SFTP Details **without the port** (the bit that looks like `:2022` ). It should look something like this: `sftp://node.talldwarfhosting.com`
+
+**Username** - The "Username" from SFTP Details. It should look like: `user.89h843` 
+
+**Password** - This is the password you use to login to you **Game Panel** account.
+
+**Port** - From the "Server Address" after `:` . _Note: If you do not know try "2022" as all our nodes are configured to use port 2022._
+
+### Final Result
+
+Your final result should look something close to this:
+
+| **Host**                         | **Username** | **Password** | **Port** |
+| :------------------------------: | :----------: | :----------: | :------: |
+| sftp://node.talldwarfhosting.com | user.89h843  | ●●●●●●       | 2022     |
+
+Thats all\!
+
+<Info>
+  If you encounter any issues connecting to your server feel free to reach out to our support team
+</Info>

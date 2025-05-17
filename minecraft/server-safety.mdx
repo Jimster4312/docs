@@ -1,0 +1,73 @@
+---
+title: "Securing your Minecraft Server"
+description: "Keeping your Minecraft server secure is essential, especially if it's open to the public. This guide covers important security measures to protect your server from hackers, griefers, and unauthorized access."
+---
+
+## **Online Mode Settings**[**​**](https://help.talldwarfhosting.com/docs/minecraft-server-safety#online-mode-settings)
+
+One of the most critical security settings for your Minecraft server is the "Online Mode" option.
+
+### **What is Online Mode?**[**​**](https://help.talldwarfhosting.com/docs/minecraft-server-safety#what-is-online-mode)
+
+When enabled, Online Mode verifies each player's identity with Mojang's authentication servers before allowing them to connect. This ensures that:
+
+1. Players are using legitimate, purchased Minecraft accounts
+2. Players cannot impersonate others by using their usernames
+3. Various security exploits are prevented
+
+### **Configuration Options**[**​**](https://help.talldwarfhosting.com/docs/minecraft-server-safety#configuration-options)
+
+#### **Online Mode: TRUE (Recommended)**[**​**](https://help.talldwarfhosting.com/docs/minecraft-server-safety#online-mode-true-recommended)
+
+```
+online-mode=true
+```
+
+**Benefits**:
+
+- Only legitimate Minecraft accounts can connect
+- Players cannot impersonate others
+- Better protection against certain security exploits
+- Compatible with most premium plugins
+
+**When to use**: For most servers, especially public ones or those with valuable builds and economies.
+
+#### **Online Mode: FALSE**[**​**](https://help.talldwarfhosting.com/docs/minecraft-server-safety#online-mode-false)
+
+```
+online-mode=false
+```
+
+**Note**: This setting is **not recommended** unless you have a specific need, such as:
+
+- Creating a "cracked" server (allowing non-premium Minecraft accounts)
+- Setting up a server behind a proxy like BungeeCord (requires additional security measures)
+
+**Risks**:
+
+- Anyone can join using any username
+- No verification of player identity
+- Vulnerable to certain security exploits
+- Potential for griefing and unauthorized access
+
+### **How to Change Online Mode**[**​**](https://help.talldwarfhosting.com/docs/minecraft-server-safety#how-to-change-online-mode)
+
+1. Log in to your [Game Panel](https://panel.talldwarfhosting.com/auth/login)
+2. Navigate to your server's **Files** section
+3. Locate and open the `server.properties` file
+4. Find the line with `online-mode=true` (or `false`)
+5. Set it to your desired value
+6. Save the file and restart your server
+
+## **Additional Security Measures**[**​**](https://help.talldwarfhosting.com/docs/minecraft-server-safety#additional-security-measures)
+
+For comprehensive server security, consider implementing these additional measures:
+
+1. **Install an Anti-Grief Plugin** like CoreProtect
+2. **Set Up Permissions** with a plugin like LuckPerms
+3. **Use Whitelist Mode** for private servers
+4. **Install Authentication Plugins** if running in offline mode
+5. **Keep Your Server Updated** to the latest Minecraft version
+6. **Regularly Backup Your World** to prevent data loss
+
+Remember that security is an ongoing process. Regularly review your server's logs and security settings to ensure it remains protected.
