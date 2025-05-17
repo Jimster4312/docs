@@ -22,7 +22,7 @@
           {
             "group": "Account Management",
             "pages": [
-              "account-management/setup-2fa"
+              "account-management/setup-two-factor"
             ]
           },
           {
