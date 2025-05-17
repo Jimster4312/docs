@@ -29,7 +29,7 @@
             "group": "Game Server Help",
             "pages": [
               "game-server-help/subusers",
-              "game-server-help/scheduels",
+              "game-server-help/schedules",
               "game-server-help/sftp-access",
               "game-server-help/subdomain",
               "game-server-help/import-server"
@@ -42,7 +42,7 @@
               "minecraft/server-icon",
               "minecraft/server-safety",
               "minecraft/setting-up-dynmap",
-              "minecraft/setting-coreprotect"
+              "minecraft/setup-coreprotect"
             ]
           }
         ]
@@ -53,27 +53,25 @@
     }
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "https://talldwarfhosting.com/assets/img/logo_full-black.png",
+    "dark": "https://talldwarfhosting.com/assets/img/logo_full.png"
   },
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "Discord",
+        "href": "https://talldwarf.host/discord"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Game Panel",
+      "href": "https://panel.talldwarfhosting.com"
     }
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "discord": "https://talldwarf.host/discord"
     }
   }
 }
