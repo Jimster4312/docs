@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
+  "theme": "almond",
   "name": "TallDwarf Hosting Knowledge Base",
   "colors": {
     "primary": "#068488",
@@ -78,6 +78,12 @@
   "footer": {
     "socials": {
       "discord": "https://talldwarf.host/discord"
+    }
+  },
+  "seo": {
+    "metatags": {
+        "og:image": "link to your default meta tag image",
+        "og:color": "#068488"
     }
   }
 }
