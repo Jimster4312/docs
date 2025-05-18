@@ -44,6 +44,12 @@
               "minecraft/setting-up-dynmap",
               "minecraft/setup-coreprotect"
             ]
+          },
+          {
+            "group": "Misc Docs",
+            "pages": [
+              "other/affiliate"
+            ]
           }
         ]
       }
