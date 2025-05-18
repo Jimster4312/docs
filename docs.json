@@ -1,11 +1,11 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "almond",
+  "theme": "maple",
   "name": "TallDwarf Hosting Knowledge Base",
   "colors": {
     "primary": "#068488",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "light": "#068488",
+    "dark": "#068488"
   },
   "favicon": "https://talldwarfhosting.com/assets/favicon.svg",
   "navigation": {
